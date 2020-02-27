@@ -24,9 +24,9 @@ function toggleRecording() {
     }
 }
 
-function sendInfo(blob) {    
-    fetch('http://localhost:3000/mockPath', {
-        method: 'PUT',
+function sendInfo(blob) {
+    fetch('http://localhost:3000/', {
+        method: 'POST',
         body: blob
     })
     .then((response) => response.json())
