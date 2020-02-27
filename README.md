@@ -1,7 +1,10 @@
 # Initial Setup
 
 ```bash
-cd server/3rdparty/DeepSpeech
+cd server/3rdparty
+git clone https://github.com/mozilla/DeepSpeech
+
+cd DeepSpeech
 
 virtualenv -p python3 deepspeech-venv/
 source deepspeech-venv/bin/activate
