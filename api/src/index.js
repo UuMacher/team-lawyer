@@ -1,7 +1,8 @@
 const Koa = require('koa');
-const koaRouter = require('@koa/router');
 const koaBody = require('koa-body');
 const app = new Koa();
+
+const { execSync } = require('child_process');
 
 app.use(koaBody({
   formidable:{
@@ -12,18 +13,9 @@ app.use(koaBody({
   urlencoded: true
 }));
 
-const router = new koaRouter();
+app.use(async (ctx, next) => {
+  const result = execSync('cd 3rdparty/DeepSpeech && deepspeech-venv/bin/deepspeech --model deepspeech-0.6.1-models/output_graph.pbmm --lm deepspeech-0.6.1-models/lm.binary --trie deepspeech-0.6.1-models/trie --audio ../../uploads/test.wav');
+  ctx.body = result;
+});
 
-router.post('/phonecall', handlePhonecall);
-
-function *handlePhonecall() {
-  console.log("Files: ", this.request.body.files);
-  console.log("Fields: ", this.request.body.fields);
-  this.body = "Received your data!";
-}
-
-app.use(router.routes());
-app.use(router.allowedMethods());
-
-console.log('listening on port 3000');
-app.listen(3000);
+app.listen(3000, () => console.log('Koa app listening on 3000'));
