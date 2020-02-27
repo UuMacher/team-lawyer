@@ -1,6 +1,6 @@
 # Initial Setup
 
-## Linux and Mac:
+## Linux and Mac
 
 ```bash
 cd server/3rdparty
@@ -27,7 +27,7 @@ tar xvf audio-0.6.1.tar.gz
 deepspeech --model deepspeech-0.6.1-models/output_graph.pbmm --lm deepspeech-0.6.1-models/lm.binary --trie deepspeech-0.6.1-models/trie --audio audio/2830-3980-0043.wav
 ```
 
-## Windows:
+## Windows
 
 ```bash
 cd server/3rdparty
