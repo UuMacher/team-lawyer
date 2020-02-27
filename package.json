@@ -4,7 +4,8 @@
   "description": "Lawyers are not trained to be teamplayers. But they have to collaborate as a team on legal projects. With team:lawyer we enable collaboration in your legal projects.",
   "main": "index.js",
   "scripts": {
-    "server:serve": "cd api && npm start",
+    "api:install": "cd api && npm install",
+    "api:serve": "cd api && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
