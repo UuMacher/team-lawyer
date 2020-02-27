@@ -1,0 +1,11 @@
+{
+  "name": "team-lawyer",
+  "version": "0.1.0",
+  "description": "Lawyers are not trained to be teamplayers. But they have to collaborate as a team on legal projects. With team:lawyer we enable collaboration in your legal projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
