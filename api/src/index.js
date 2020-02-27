@@ -16,6 +16,10 @@ const router = new koaRouter();
 
 router.post('/phonecall', handlePhonecall);
 
+router.put('/mockPath', (ctx, next) => {
+  ctx.body = 'mock';
+});
+
 function *handlePhonecall() {
   console.log("Files: ", this.request.body.files);
   console.log("Fields: ", this.request.body.fields);
