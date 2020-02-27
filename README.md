@@ -3,7 +3,7 @@
 ## Linux and Mac
 
 ```bash
-cd server/3rdparty
+cd api/3rdparty
 git clone https://github.com/mozilla/DeepSpeech
 
 cd DeepSpeech
@@ -30,7 +30,7 @@ deepspeech --model deepspeech-0.6.1-models/output_graph.pbmm --lm deepspeech-0.6
 ## Windows
 
 ```bash
-cd server/3rdparty
+cd api/3rdparty
 git clone https://github.com/mozilla/DeepSpeech
 
 cd DeepSpeech
